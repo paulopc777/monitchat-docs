@@ -8,15 +8,100 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Examples', link: '/markdown-examples' },
+
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Autenticação',
+        link: '/autenticacao',
+      },
+      {
+        text: 'Mensagens',
         items: [
-          { text: 'Autenticacao', link: '/auth' },
-          { text: 'Envio de mensagens', link: '/send_messages' }
+          { text: 'Envio de mensagens', link: '/envioMensagens' },
+          { text: 'Mensagens com Media', link: '/envioMedia' },
+          { text: 'Listagem de mensagens', link: '/listagemMessages' }
+        ]
+      },
+      {
+        text: "WhatsApp",
+        items: [
+          {
+            text: "Listar Templates",
+            link: "/templates/listTemplates"
+          },
+          {
+            text: "WhatsApp Status",
+            link: "/whatsapp/whatsappStatus"
+          }
+        ]
+      },
+      {
+        text: "Monitchat",
+        items: [
+          {
+            text: "Contatos",
+            items: [
+              {
+                text: "Listar contatos",
+                link: ""
+              },
+              {
+                text: "Criar contato",
+                link: ""
+              }
+            ]
+          },
+          {
+            text: "Clientes",
+            items: [
+              {
+                text: "Listar clientes",
+                link: ""
+              },
+              {
+                text: "Criar cliente",
+                link: ""
+              }
+            ]
+          },
+        ]
+      },
+      {
+        text: 'WebSockets',
+        items: [
+          {
+            text: "Eventos",
+            items: [
+              {
+                text: "Mensagens",
+                items: [
+                  {
+                    text: "Mensagem recebida",
+                  },
+                  {
+                    text: "Mensagem atualizada",
+                  }
+                ]
+              },
+              {
+                text: "Ticket",
+                items: [
+                  {
+                    text: "Ticket Criado"
+                  },
+                  {
+                    text: "Mudança de Status",
+                  },
+                  {
+                    text: "Mudança de Usuário",
+                  }
+                ]
+              }
+            ]
+          }
         ]
       }
     ],
