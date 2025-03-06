@@ -46,11 +46,11 @@ export default defineConfig({
             items: [
               {
                 text: "Listar contatos",
-                link: ""
+                link: "/contatos/listarContatos"
               },
               {
                 text: "Criar contato",
-                link: ""
+                link: "/contatos/createContato"
               }
             ]
           },
@@ -59,11 +59,11 @@ export default defineConfig({
             items: [
               {
                 text: "Listar clientes",
-                link: ""
+                link: "/cliente/listarClientes"
               },
               {
                 text: "Criar cliente",
-                link: ""
+                link: "/cliente/createCliente"
               }
             ]
           },
@@ -80,9 +80,11 @@ export default defineConfig({
                 items: [
                   {
                     text: "Mensagem recebida",
+                    link: "/websockets/MessageRecebida"
                   },
                   {
                     text: "Mensagem atualizada",
+                    link:"/websockets/MessageUpdate"
                   }
                 ]
               },
