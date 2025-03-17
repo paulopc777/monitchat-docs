@@ -3,6 +3,7 @@ import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
+import PostRequest from '../components/PostRequest.vue';
 
 export default {
   extends: DefaultTheme,
@@ -13,5 +14,6 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     // ...
+    app.component('PostRequest', PostRequest);
   }
 } satisfies Theme

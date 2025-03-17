@@ -15,7 +15,7 @@ export default defineConfig({
     sidebar: [
       {
         text: 'Autenticação',
-        link: '/autenticacao',
+        link: '/auth/autenticacao',
       },
       {
         text: 'Mensagens',
@@ -84,7 +84,7 @@ export default defineConfig({
                   },
                   {
                     text: "Mensagem atualizada",
-                    link:"/websockets/MessageUpdate"
+                    link: "/websockets/MessageUpdate"
                   }
                 ]
               },
@@ -92,13 +92,16 @@ export default defineConfig({
                 text: "Ticket",
                 items: [
                   {
-                    text: "Ticket Criado"
+                    text: "Ticket Criado",
+                    link: "/websockets/TicketCriado"
                   },
                   {
                     text: "Mudança de Status",
+                    link: "/websockets/StatusChange"
                   },
                   {
                     text: "Mudança de Usuário",
+                    link: "/websockets/TicketChangeOwnner"
                   }
                 ]
               }

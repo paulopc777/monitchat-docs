@@ -1,58 +1,45 @@
----
-outline: deep
----
+### Login
 
-# Exemplos da API
-
-## Authentication
-
-Toras de api fixadas so estao disponiveis apos a altenticacoa 
-
-- login
-- logout
-- refresh
-
-### Login 
 ::: code-group
 
 ```ts [login.ts]
-    export interface Data {
-        userData:     UserData;
-        accessToken:  string;
-        refreshToken: string;
-    }
+export interface Data {
+  userData: UserData;
+  accessToken: string;
+  refreshToken: string;
+}
 
-    export interface User {
-        id:         number;
-        fullName:   string;
-        username:   string;
-        avatar:     string;
-        email:      string;
-        role:       string;
-        about:      null;
-        ability:    Ability[];
-        company_id: number;
-        extras:     any[];
-    }
+export interface User {
+  id: number;
+  fullName: string;
+  username: string;
+  avatar: string;
+  email: string;
+  role: string;
+  about: null;
+  ability: Ability[];
+  company_id: number;
+  extras: any[];
+}
 
-    export interface Ability {
-        action:  string;
-        subject: string;
-    }
+export interface Ability {
+  action: string;
+  subject: string;
+}
 
-    const url = new URL("https://api-v2.monitchat.com/api/v1/auth/login");
+const url = new URL("https://api-v2.monitchat.com/api/v1/auth/login");
 
-    let body = {
-        email: "email@email.com.br",
-        password: "password"
-    }
+let body = {
+  email: "email@email.com.br",
+  password: "password",
+};
 
-    fetch(url, {
-        method: "POST",
-        body: body
-    })
-    .then(response => response.json() )
-    .then(json => json as Data);
+fetch(url, {
+  method: "POST",
+  body: body,
+})
+  .then((response) => response.json())
+  .then((json) => json as Data);
 ```
 
 ```php [login.php]
@@ -131,7 +118,6 @@ print_r($data);
 
 ```
 
-
 ```go [login.go]
 package main
 
@@ -208,5 +194,6 @@ func main() {
     fmt.Printf("Response Data: %+v\n", data)
 }
 
-```    
+```
+
 :::
