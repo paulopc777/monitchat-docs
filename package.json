@@ -1,11 +1,13 @@
 {
-  "dependencies": {},
   "devDependencies": {
     "vitepress": "^1.6.3"
   },
   "scripts": {
     "dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
-  }
+    "docs:preview": "vitepress preview docs",
+    "build":"npx vitepress build docs"
+  },
+  "buildCommand": "npm run docs:build"
+
 }
