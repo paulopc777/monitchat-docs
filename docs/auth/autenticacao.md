@@ -6,7 +6,7 @@ outline: deep
 
 ## Authentication
 
-Toras de api fixadas so estao disponiveis apos a altenticacoa
+As seguintes métodos podem ser chamados na api de autenticação
 
 - login
 - logout

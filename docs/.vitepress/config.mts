@@ -2,13 +2,18 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Monitchat DOCS",
-  description: "Docs do monitchat ",
+  title: " ",
+  description: "Documentação do Monitchat",
+
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
+    logo: {
+      dark: '/public/LogoMonitchat.png',
+      light: 'public/LogoMonitchatLigth.png'
+    },
+
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' },
+      { text: 'Inicial', link: '/' },
+      { text: 'Exemplos', link: '/auth/autenticacao' },
 
     ],
 
@@ -112,7 +117,11 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
+      {
+        icon: "home",
+        link: 'https://new.monitchat.com/static/media/logogreen.17388e1a.png'
+      }
     ]
   }
 })
