@@ -8,7 +8,7 @@ Para criar um novo webhook basta clicar no botão **Novo** la voce deve preenche
 
 1. Url a ser requisitada
 2. Quanto e evento deve ocorrer
-   - [Mensagem Recebida](MensagemRecebidoPayload.md) (Sempre que uma mensagem for recebida)
+   - [Mensagem Recebida](./webhookMessageRecebida.md) (Sempre que uma mensagem for recebida)
    - Mensagem Enviada (Sempre que uma mensagem for enviada)
    - Mensagem Respondida (Sempre que uma mensagem for respondida)
    - Mensagem Atualizada (Sempre que o status da mensagem for atualizado)
