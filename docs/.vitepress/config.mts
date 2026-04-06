@@ -19,8 +19,8 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Inicial',
-        link: '/auth/autenticacao',
+        text: 'Início',
+        link: '/home/home',
       },
       {
         text: 'Mensagens',
@@ -67,68 +67,67 @@ export default defineConfig({
         ]
       },
       {
-        text: "Monitchat",
+        text: "Contatos",
         items: [
           {
-            text: "Contatos",
-            items: [
-              {
-                text: "Listar contatos",
-                link: "/contatos/listarContatos"
-              },
-              {
-                text: "Criar contato",
-                link: "/contatos/createContato"
-              }
-            ]
+            text: "Listar contatos",
+            link: "/contatos/listarContatos"
           },
           {
-            text: "Clientes",
-            items: [
-              {
-                text: "Listar clientes",
-                link: "/cliente/listarClientes"
-              },
-              {
-                text: "Criar cliente",
-                link: "/cliente/createCliente"
-              }
-            ]
+            text: "Criar contato",
+            link: "/contatos/createContato"
           },
           {
-            text: "Tickets",
-            items: [
-              {
-                text: "Listar tickets",
-                link: "/ticket/listarTickets"
-              },
-              {
-                text: "Criar ticket",
-                link: "/ticket/criarTicket"
-              }
-            ]
+            text: "Atualizar contato",
+            link: "/contatos/updateContato"
+          }
+        ]
+      },
+      {
+        text: "Clientes",
+        items: [
+          {
+            text: "Listar clientes",
+            link: "/cliente/listarClientes"
           },
           {
-            text: "Usuários",
-            items: [
-              {
-                text: "Listar usuários",
-                link: "/user/listarUsuarios"
-              },
-              {
-                text: "Criar usuário",
-                link: "/user/criarUsuario"
-              }
-            ]
+            text: "Criar cliente",
+            link: "/cliente/createCliente"
+          }
+        ]
+      },
+      {
+        text: "Tickets",
+        items: [
+          {
+            text: "Listar tickets",
+            link: "/ticket/listarTickets"
           },
           {
-            text: "Estatísticas",
-            items: [
-              {
-                text: "Pesquisa de Satisfação (NPS)",
-                link: "/estatisticas/nps"
-              }
-            ]
+            text: "Criar ticket",
+            link: "/ticket/criarTicket"
+          }
+        ]
+      },
+      {
+        text: "Usuários",
+        items: [
+          {
+            text: "Listar usuários",
+            link: "/user/listarUsuarios"
+          },
+          {
+            text: "Criar usuário",
+            link: "/user/criarUsuario"
+          }
+        ]
+      },
+      {
+        text: "Estatísticas",
+        items: [
+          {
+            text: "Pesquisa de Satisfação (NPS)",
+            link: "/estatisticas/nps"
           }
         ]
       },
@@ -173,7 +172,6 @@ export default defineConfig({
         ]
       }
     ],
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
       {

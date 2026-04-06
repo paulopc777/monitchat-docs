@@ -1,13 +1,12 @@
-# Criar contato no Monitchat
+# Atualizar contato no Monitchat
 
-Nessa rota é possível criar um contato no Monitchat, associando-o a um cliente e a um canal de atendimento.
+Nessa rota é possível atualizar um contato no Monitchat, associando-o a um cliente e a um canal de atendimento.
 
-Payload de exemplo:
+Payload de exemplo o payload é o mesmo da criação de contato, porém os campos são opcionais, ou seja, é possível enviar apenas os campos que deseja atualizar.
 
 ```ts
 {
-    "name": "Teste", // obrigatório
-    "phone_number": "+55279888888", // obrigatório | Único
+    "name": "Teste",
     "whatsapp_blocked": "",
     "email": "",
     "email_optional_1": "",
@@ -15,6 +14,7 @@ Payload de exemplo:
     "extra_field_1": "",
     "extra_field_2": "",
     "lid_number": "",
+    "phone_number": "+55279888888",
     "city": "Vitória",
     "neighborhood": "",
     "code": "CEP",
@@ -45,7 +45,9 @@ Payload de exemplo:
 ```
 
 ```ts
-const url = new URL("https://api-v2.monitchat.com/api/v1/contact");
+const url = new URL(
+  "https://api-v2.monitchat.com/api/v1/contact/{{id_do_contato}}",
+);
 
 let headers = {
   Authorization: "Bearer token",
@@ -54,15 +56,8 @@ let headers = {
 };
 
 fetch(url, {
-  method: "POST",
+  method: "PUT",
   headers: headers,
-  body: JSON.stringify({
-    name: "Teste",
-    phone_number: "+55279888888",
-    city: "Vitória",
-    address: "Rua Teste",
-    client_id: "id do cliente",
-  }),
 })
   .then((response) => response.json())
   .then((json) => console.log(json));

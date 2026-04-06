@@ -27,7 +27,7 @@ let headers = {
 };
 
 let body = {
-  token: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  token: "Token de acesso",
   message: "Ola como voce esta ?",
   phone_number: "55279899999",
   account_number: "552798999999",
