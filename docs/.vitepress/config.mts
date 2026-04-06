@@ -19,7 +19,7 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Autenticação',
+        text: 'Inicial',
         link: '/auth/autenticacao',
       },
       {
@@ -27,7 +27,26 @@ export default defineConfig({
         items: [
           { text: 'Envio de mensagens', link: '/envioMensagens' },
           { text: 'Mensagens com Media', link: '/envioMedia' },
-          { text: 'Listagem de mensagens', link: '/listagemMessages' }
+          { text: 'Listagem de mensagens', link: '/listagemMessages' },
+          { text: 'Buscar mensagens por data', link: '/mensagensPorData' }
+        ]
+      },
+      {
+        text: "Webhooks",
+        items: [
+          {
+            text: "Criando Webhooks",
+            link: "/webhooks/webhooks"
+          },
+          {
+            text: "Exemplo de Webhooks",
+            items: [
+              {
+                text: "Mensagem Recebida",
+                link: "/webhooks/webhookMessageRecebida"
+              }
+            ]
+          },
         ]
       },
       {
@@ -40,6 +59,10 @@ export default defineConfig({
           {
             text: "WhatsApp Status",
             link: "/whatsapp/whatsappStatus"
+          },
+          {
+            text: "Criar QR Code",
+            link: "/whatsapp/criarQrCode"
           }
         ]
       },
@@ -72,6 +95,41 @@ export default defineConfig({
               }
             ]
           },
+          {
+            text: "Tickets",
+            items: [
+              {
+                text: "Listar tickets",
+                link: "/ticket/listarTickets"
+              },
+              {
+                text: "Criar ticket",
+                link: "/ticket/criarTicket"
+              }
+            ]
+          },
+          {
+            text: "Usuários",
+            items: [
+              {
+                text: "Listar usuários",
+                link: "/user/listarUsuarios"
+              },
+              {
+                text: "Criar usuário",
+                link: "/user/criarUsuario"
+              }
+            ]
+          },
+          {
+            text: "Estatísticas",
+            items: [
+              {
+                text: "Pesquisa de Satisfação (NPS)",
+                link: "/estatisticas/nps"
+              }
+            ]
+          }
         ]
       },
       {

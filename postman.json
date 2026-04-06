@@ -1,0 +1,818 @@
+{
+    "variables": [],
+    "info": {
+        "name": "Monitchat API",
+        "_postman_id": "3cd8e5e2-9018-484e-baf4-267d3e5a987f",
+        "description": "Public routes to integrate with Monitchat",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Authentication",
+            "description": "",
+            "item": [
+                {
+                    "name": "Login\nEsta rota, retorna um token para ser utilizado em todas as outras requisi\u00e7\u00f5es",
+                    "request": {
+                        "url": "https:\/\/api-v2.monitchat.com\/api\/v1\/auth\/login",
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "email",
+                                    "value": "saepe",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "officiis",
+                                    "type": "text",
+                                    "enabled": true
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Client",
+            "description": "",
+            "item": [
+                {
+                    "name": "List",
+                    "request": {
+                        "url": "https:\/\/api-v2.monitchat.com\/api\/v1\/client?take=commodi&skip=minus&order=nihil&orderDirection=voluptatibus&search=rem&filter=officiis",
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Create",
+                    "request": {
+                        "url": "https:\/\/api-v2.monitchat.com\/api\/v1\/client",
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Contact",
+            "description": "",
+            "item": [
+                {
+                    "name": "List",
+                    "request": {
+                        "url": "https:\/\/api-v2.monitchat.com\/api\/v1\/contact?take=excepturi&skip=quia&order=est&orderDirection=suscipit&search=aut&filter=omnis",
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer token"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Create",
+                    "request": {
+                        "url": "https:\/\/api-v2.monitchat.com\/api\/v1\/contact",
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer token"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "qui",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "phone_number",
+                                    "value": "sit",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "groups",
+                                    "value": "ut",
+                                    "type": "text",
+                                    "enabled": true
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Message",
+            "description": "",
+            "item": [
+                {
+                    "name": "Read Messages From Date",
+                    "request": {
+                        "url": "https:\/\/api-v2.monitchat.com\/api\/v1\/chat\/message\/fromDate",
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer token"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "take",
+                                    "value": 15,
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "skip",
+                                    "value": 9,
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "date",
+                                    "value": "tempore",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "phone_number",
+                                    "value": "ullam",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "account_number",
+                                    "value": "illum",
+                                    "type": "text",
+                                    "enabled": true
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Send Text",
+                    "request": {
+                        "url": "https:\/\/api-v2.monitchat.com\/api\/v1\/message",
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "token",
+                                    "value": "sit",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "message",
+                                    "value": "eligendi",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "phone_number",
+                                    "value": "quos",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "account_number",
+                                    "value": "provident",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "open_ticket",
+                                    "value": true,
+                                    "type": "text",
+                                    "enabled": true
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Send Template\nInicia uma conversa com um cliente (Api Oficial)",
+                    "request": {
+                        "url": "https:\/\/api-v2.monitchat.com\/api\/v1\/template\/send",
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "token",
+                                    "value": "945d8aaf9-f412-aac3-eea2-1365987456",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "template",
+                                    "value": "{ \"template\": { \"category\": \"UTILITY\", \"components\": [ { \"parameters\": [ { \"type\": \"text\", \"text\": \"Ricardo\" } ], \"type\": \"body\", \"format\": null }, { \"parameters\": [], \"type\": \"buttons\", \"format\": null } ], \"name\": \"pesquisa_satisfacao\", \"data\": {}, \"message\": \"\" }, \"token\": \"<token>\", \"phone_number\": \"5527999863591\" }",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "phone_number",
+                                    "value": "5527999998888",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "open_ticket",
+                                    "value": true,
+                                    "type": "text",
+                                    "enabled": true
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Send Media",
+                    "request": {
+                        "url": "https:\/\/api-v2.monitchat.com\/api\/v1\/media\/send",
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "token",
+                                    "value": "945d8aaf9-f412-aac3-eea2-1365987456",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "message",
+                                    "value": "imagem de teste",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "phone_number",
+                                    "value": "5527999998888",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "type",
+                                    "value": "image",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "name",
+                                    "value": "Ricardo",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "file_name",
+                                    "value": "manual.pdf",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "url",
+                                    "value": "https:\/\/instagram.fvix18-1.fna.fbcdn.net\/v\/t51.2885-15\/338622562_1380639859389364_4875601949228640122_n.webp?stp=dst-jpg_e35&_nc_ht=instagram.fvix18-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=qPPDXxctD6IAX_aiDSu&edm=ACWDqb8BAAAA&ccb=7-5&ig_cache_key=MzA3MTQ3NTY2ODA3MjYzNTQ4Mw%3D%3D.2-ccb7-5&oh=00_AfACLBilOqHv5rIIjll2FTkmZIgSR-MRdEImdg2IhI3-YQ&oe=644EE4F4&_nc_sid=1527a3",
+                                    "type": "text",
+                                    "enabled": true
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Contact Messages\nBusca as mensagens do contato pelo n\u00famero do telefone",
+                    "request": {
+                        "url": "https:\/\/api-v2.monitchat.com\/api\/v1\/chat\/{phone}\/messages?phone=2",
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "take",
+                                    "value": "nobis",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "skip",
+                                    "value": "vitae",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "token",
+                                    "value": "placeat",
+                                    "type": "text",
+                                    "enabled": true
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Statistic",
+            "description": "",
+            "item": [
+                {
+                    "name": "Pesquisa de Satisfa\u00e7\u00e3o",
+                    "request": {
+                        "url": "https:\/\/api-v2.monitchat.com\/api\/v1\/statistic\/nps",
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "token",
+                                    "value": "asd9f8a7ewra56sfasdf65as",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "mv",
+                                    "value": "true",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "answered",
+                                    "value": "true",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "period",
+                                    "value": "month",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "start_date",
+                                    "value": "01-08-2023",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "end_date",
+                                    "value": "30-08-2023",
+                                    "type": "text",
+                                    "enabled": true
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Ticket",
+            "description": "",
+            "item": [
+                {
+                    "name": "List",
+                    "request": {
+                        "url": "https:\/\/api-v2.monitchat.com\/api\/v1\/ticket?take=consequatur&skip=rerum&order=sunt&orderDirection=architecto&search=dolorum&start=facilis&end=numquam",
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer token"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Create",
+                    "request": {
+                        "url": "https:\/\/api-v2.monitchat.com\/api\/v1\/ticket",
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer token"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "contact_id",
+                                    "value": 5,
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "title",
+                                    "value": "rerum",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "source",
+                                    "value": "enim",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "current_status",
+                                    "value": 1,
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "current_progress",
+                                    "value": 9,
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "user_id",
+                                    "value": 16,
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "active",
+                                    "value": 18,
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "no_user",
+                                    "value": true,
+                                    "type": "text",
+                                    "enabled": true
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "User",
+            "description": "",
+            "item": [
+                {
+                    "name": "List",
+                    "request": {
+                        "url": "https:\/\/api-v2.monitchat.com\/api\/v1\/user?take=amet&skip=cum&order=libero&orderDirection=ullam&search=porro&filter=facilis",
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Create",
+                    "request": {
+                        "url": "https:\/\/api-v2.monitchat.com\/api\/v1\/user",
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "quis",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "autem",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "est",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "phone_number",
+                                    "value": "quis",
+                                    "type": "text",
+                                    "enabled": true
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Whatsapp",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get Templates\nBusca os templates dispon\u00edveis para iniciar uma conversa",
+                    "request": {
+                        "url": "https:\/\/api-v2.monitchat.com\/api\/v1\/whatsapp-template",
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "token",
+                                    "value": "optio",
+                                    "type": "text",
+                                    "enabled": true
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Create QrCode",
+                    "request": {
+                        "url": "https:\/\/api-v2.monitchat.com\/api\/v1\/qrcode",
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "token",
+                                    "value": "945d8aaf9-f412-aac3-eea2-1365987456",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "phone_number",
+                                    "value": "5527999998888",
+                                    "type": "text",
+                                    "enabled": true
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Whatsapp Status",
+                    "request": {
+                        "url": "https:\/\/api-v2.monitchat.com\/api\/v1\/qrcode",
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "token",
+                                    "value": "945d8aaf9-f412-aac3-eea2-1365987456",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "phone_number",
+                                    "value": "5527999998888",
+                                    "type": "text",
+                                    "enabled": true
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        }
+    ]
+}
