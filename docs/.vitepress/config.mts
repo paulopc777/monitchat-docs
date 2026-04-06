@@ -13,7 +13,7 @@ export default defineConfig({
 
     nav: [
       { text: 'Inicial', link: '/' },
-      { text: 'Exemplos', link: '/auth/autenticacao' },
+      { text: 'Exemplos', link: '/home/home' },
 
     ],
 
