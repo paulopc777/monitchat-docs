@@ -11,6 +11,8 @@ Existen 2 formas de autenticação na API do Monitchat:
 
 O token de acesso pode ser obtido em [Parametros](https://new.monitchat.com/parameters?tab=integrations) campo de **Chave de Acesso**.
 
+E pode ser usando nas rotas que aceitam o _Token_ como parâmetro no _BODY_ da requisição.
+
 ```ts [index.ts]
 const url = new URL("https://api-v2.monitchat.com/api/v1/message");
 
@@ -37,8 +39,13 @@ fetch(url, {
 
 2. **Bearer Token**: para autenticar utilizando o Bearer Token, basta passar o Bearer Token no header da requisição.
 
+```json
+{
+  "Authorization": "Bearer YOUR_ACCESS_TOKEN"
+}
+```
 
-### Login
+### Como obter o JWT 
 
 ::: code-group
 
@@ -239,4 +246,3 @@ func main() {
 :::
 
 <PostRequest />
-
