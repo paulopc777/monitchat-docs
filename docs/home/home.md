@@ -45,7 +45,7 @@ fetch(url, {
 }
 ```
 
-### Como obter o JWT 
+### Como obter o JWT
 
 ::: code-group
 
